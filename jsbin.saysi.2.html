@@ -1,0 +1,3043 @@
+<!DOCTYPE HTML>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by jdgrafikx (http://jsbin.com/sayasi/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+  
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
+
+<html>
+	<head>
+      <meta charset="UTF-8">
+      <title>
+        Benjamin Doyle
+      </title>
+		<!-- Viewport meta tag to prevent iPhone from scaling our page -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+
+<script src="dist/html5shiv.js"></script>
+      
+<!-- Normalize hide address bar for iOS and Android -->
+<script src="dfikx.js"></script><script src="hideaddressbar.js"></script>
+
+<!--Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers !-->      
+      
+<script src="matchmedia.js"></script>
+<script src="picturefill.js"></script>
+<script src="respond.min.js"></script>
+<script src="respond.src.js"></script>          
+      
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]!-->
+      
+<!-- Media query support for IE8 and under. Must place media queries in external stylesheet -->
+		
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]!-->        
+      
+<!--[if lt IE 9]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+<![endif]!-->
+
+<!--[if IE 8]>
+<script src="./js/checkbox.js"></script>
+<![endif]!-->
+
+<!--[if IE 6]>
+<script src="./js/selectivizr-min.js"></script>
+<![endif]!-->
+ 
+<link rel="stylesheet" href="dfikx.css" />
+      
+<style type="text/css" media="all">
+
+#rotator {  
+    box-sizing: border-box;
+	height: 190px;
+    margin-left: 2.85%;
+    margin-top: 50px;
+    margin-right: auto;
+	overflow: hidden;  
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+	}
+  
+#xfade2 {  
+    border: 1px solid black;
+	float: right;  
+    height: 420px;
+	margin-bottom: 0px;  
+	margin-left: auto;
+	margin-right: auto;  
+	margin-top: 0px;  
+	overflow: hidden;  
+    position: absolute;  
+    width: 600px;
+}
+
+      </style>
+      
+<script type="text/javascript" src="rotator.js"></script>
+<script type="text/javascript" src="xfade2.js"></script>
+      
+      
+  <style id="jsbin-css">
+/*dfikx.css*/
+
+
+
+
+
+
+
+
+
+body,
+
+div,
+
+h1,
+
+h2,
+
+h3,
+
+h4,
+
+h5,
+
+h6,
+
+p,
+
+blockquote,
+
+pre,
+
+dl,
+
+dt,
+
+dd,
+
+ol,
+
+ul,
+
+li,
+
+fieldset,
+
+form,
+
+label,
+
+legend,
+
+th,
+
+td,
+
+article,
+
+aside,
+
+figure,
+
+footer,
+
+header,
+
+hgroup,
+
+menu,
+
+nav,
+
+section {
+
+	margin: 0;
+
+	padding: 0;
+
+	border: 0;
+
+}
+
+
+
+	Normalize CSS
+
+	http://necolas.github.com/normalize.css/
+
+
+
+
+
+html {
+
+	font-size: 100%; /* 100% = 16px*/
+
+    line-height: 1;
+
+    height: 100%;
+
+	-webkit-text-size-adjust: 100%;
+
+	-ms-text-size-adjust: 100%;
+
+    -moz-text-size-adjust: 100%;
+
+}
+
+
+
+body {
+
+
+
+    min-height: 100%;
+
+	font-size: 100%;
+
+  
+
+}
+
+
+
+article,
+
+aside,
+
+details,
+
+figcaption,
+
+figure,
+
+footer,
+
+header,
+
+hgroup,
+
+nav,
+
+section,
+
+audio,
+
+canvas,
+
+video {
+
+
+
+  display: block;
+
+
+
+}
+
+
+
+sub,
+
+sup {
+
+
+
+  font-size: 75%;
+
+	line-height: 0;
+
+	position: relative;
+
+	vertical-align: baseline;
+
+
+
+}
+
+
+
+sup {
+
+
+
+  top: -0.5em;
+
+
+
+}
+
+
+
+sub {
+
+
+
+  bottom: -0.25em;
+
+
+
+}
+
+
+
+pre {
+
+
+
+    white-space: pre;
+
+	white-space: pre-wrap;
+
+	word-wrap: break-word;
+
+
+
+}
+
+
+
+b,
+
+strong {
+
+
+
+  font-weight: bold;
+
+
+
+}
+
+
+
+abbr[title] {
+
+
+
+  border-bottom: 1px dotted;
+
+
+
+}
+
+
+
+input,
+
+textarea,
+
+button,
+
+select {
+
+
+
+    margin: 0;
+
+	font-size: 100%;
+
+	line-height: normal;
+
+	vertical-align: baseline;
+
+
+
+}
+
+
+
+button,
+
+html input[type="button"],
+
+input[type="reset"],
+
+input[type="submit"] {
+
+
+
+    cursor: pointer;
+
+	-webkit-appearance: button;
+
+
+
+}
+
+
+
+a:link {
+
+  text-decoration: none;
+
+}
+
+
+
+a:hover {
+
+  color: #FF530D;
+
+}
+
+
+
+body { 
+
+    -webkit-animation: bugfix infinite 1s; 
+
+}
+
+
+
+body {
+
+  
+
+  font-family: "Roboto Condensed Light" , "Helvetica Neue" , Helvetica, sans-serif;
+
+}
+
+
+
+.box {
+
+
+
+  padding:14px;
+
+  position: relative;
+
+
+
+}
+
+
+
+.box ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+.box h2 {
+
+  
+
+  color: #352a38;
+
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+
+  
+
+}
+
+
+
+.box h4 {
+
+    color: #352a38;
+
+    border-top: 4px double #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 1em;
+
+    font-weight: normal;
+
+    line-height: 1.56;
+
+    text-transform: uppercase;
+
+    margin-bottom: .975em; /* 3/4 of 1.3 */
+
+    text-align: center;
+
+    letter-spacing: .024em;
+
+    position: relative;
+
+}
+
+
+
+@-webkit-keyframes bugfix {
+
+    from {padding: 0;} 
+
+    to {padding: 0;} 
+
+}
+
+
+
+#container-article {
+
+  
+
+  background-color: #ffffff;
+
+  position: relative;
+
+  background: #fff;
+
+  -moz-box-shadow: 0 0 .5em .5em rgba( 0, 0, 0, .5 );
+
+  -webkit-box-shadow: 0 0 .5em .5em rgba( 0, 0, 0, .5 );
+
+  box-shadow: 0 0 .5em .5em rgba( 0, 0, 0, .1 );
+
+  padding: .975em; /* 3/4 of 1.3 */
+
+}
+
+
+
+#container-footer {
+
+  
+
+  background: #352a38;
+
+  color: #eee;
+
+  font-weight: 100;
+
+  padding: 32px 0px;
+
+  position: relative;
+
+}
+
+
+
+#container-header {
+
+  
+
+  background: #352a38;
+
+  background-size: contain;
+
+  height: 300px;
+
+  width: 100%;
+
+  margin-top: 0 0 0 0;
+
+  position: relative;
+
+  z-index: -1;
+
+}
+
+
+
+#content, #colophon, #masthead, #nav {
+
+  
+
+  margin: 0 18px;
+
+  position: relative;
+
+}
+
+
+
+#container-nav {
+
+  
+
+  background: #ffffff;
+
+  padding-top: 0px;
+
+  position: relative;
+
+  
+
+}
+
+
+
+#nav input[type=checkbox]:checked ~ nav {
+
+    height: auto;
+
+    overflow: hidden;  
+
+}
+
+
+
+#nav input[type=checkbox] {
+
+    position: absolute;
+
+    top: -999em;
+
+    left: -999em;
+
+}
+
+
+
+#nav a {
+
+   display: block;
+
+   font-size: 1.063em;
+
+   color: #333;
+
+   text-decoration: none;
+
+   padding: .975em 1.3em; 
+
+}
+
+
+
+#nav a:hover {
+
+   background: #f8f8f8;
+
+}
+
+
+
+#nav nav {
+
+    height: 0;
+
+    overflow: hidden;
+
+}
+
+
+
+#nav h3 {
+
+    float: left;
+
+    text-transform: capitalize; 
+
+}
+
+
+
+#nav label { 
+
+    display: block;
+
+    background: url("http://s27.postimg.org/idd4sief3/icon_menu.png") no-repeat right center;
+
+    text-indent: -999em;
+
+    cursor: pointer;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+
+    -moz-user-select: none;     /* Firefox all */
+
+    -ms-user-select: none;      /* IE 10+ */
+
+    user-select: none;
+
+}
+
+
+
+#nav li {
+
+   border-top: 1px solid #eee;
+
+}
+
+
+
+#nav ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    border-bottom: 1px solid #eee;
+
+    margin: .35em 0 .30em;
+
+}
+
+
+
+
+
+#colophon {
+
+  
+
+}
+
+
+
+figure,
+
+.box {
+
+    background: #ffffff;
+
+    -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+
+    -webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+
+    box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+
+    padding: .975em; /* 3/4 of 1.3 */
+
+    position: relative;
+
+}
+
+
+
+/* Form / Basic Layout */
+
+
+
+form {
+
+    padding: 0 0 1.3em;
+
+    position: relative;
+
+    z-index: 1;
+
+    }
+
+    
+
+form ul {
+
+    list-style: none;
+
+    padding: 1.3em 0 0;
+
+    }
+
+    
+
+form li {
+
+    padding: 0 0 .65em;
+
+    }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-weight: 100;
+
+  letter-spacing: .03em;
+
+  margin-top: 0px;
+
+  margin-bottom: 0px;
+
+  padding-top: 0px;
+
+  padding-bottom: 0px;
+
+}
+
+
+
+h1 {
+
+    color: #352a38;
+
+    font-size: 3.375em;
+
+    /* 3 x 1.125 = 3.375*/
+
+    line-height: 1.25;
+
+    /*  20px / 16 = 1.25em*/
+
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+
+    }	
+
+
+
+h2 {
+
+    color: #352a38;
+
+    font-size: 2.25em;
+
+    /* 2 x 1.125 = 2.25em */
+
+    line-height: 1.244;
+
+    }
+
+
+
+h3{
+
+  color: #352a38;
+
+  font-size: 1.575em;
+
+  /* 1.125 x 1.4 = 1.575 */
+
+  line-height: 1.1;
+
+  /* 1.4+.65=2.05-.325=1.725/1.575=1.0952380952381*/
+
+}
+
+
+
+figcaption, h4 {
+
+    color: #352a38;
+
+    font-family: Baskerville;
+
+    font-size: 1em;
+
+    line-height: 1.56;
+
+    text-transform: uppercase;
+
+}
+
+
+
+#portfolio, h4 {
+
+    line-height: 1.82;
+
+}
+
+
+
+#portfolio h5, h6 {
+
+  
+
+    color: #352a38;
+
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	font-size: .85em;
+
+	line-height: 1.53;
+
+					}
+
+	
+
+img {
+
+  
+
+  max-width: 100%;
+
+
+
+}
+
+
+
+input[type="checkbox"],
+
+input[type="radio"] {
+
+
+
+  -webkit-box-sizing: border-box;
+
+  -moz-box-sizing: border-box;
+
+  -o-box-sizing: border-box;
+
+  -ms-box-sizing: border-box;
+
+  box-sizing: border-box;
+
+
+
+}
+
+
+
+input,
+
+textarea {
+
+    display: block;
+
+    width: 100%;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	font-size: 1em;
+
+	line-height: 1.3;
+
+	font-weight: 500;
+
+    padding: .65em;
+
+    -webkit-box-sizing: border-box;
+
+    -moz-box-sizing: border-box;
+
+    box-sizing: border-box;
+
+    }
+
+
+
+legend {
+
+	font-size: 1.382em; 
+
+	line-height: 1.223;
+
+	}
+
+		    
+
+label {
+
+    display: block;
+
+	font-size: 1em;
+
+	line-height: 1.56;
+
+    padding: 0 0 .325em;
+
+	}
+
+		
+
+legend, label {      
+
+	font-weight: 300;
+
+	text-transform: uppercase;
+
+	color: #fff;
+
+	}
+
+	
+
+/**
+
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+
+ * 2. Improve readability and alignment in all browsers.
+
+ */
+
+
+
+textarea {
+
+    padding-bottom: 10%;
+
+    overflow: auto; /* 1 */
+
+    vertical-align: top; /* 2 */
+
+    }
+
+
+
+.send {
+
+    display: inline-block;
+
+    max-width: 30em;
+
+    font-size: 1em;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    background: #0074b0;
+
+    margin: .65em .26em;
+
+    padding: .975em;
+
+    border: 0;
+
+    border-radius: 1.3em;
+
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
+
+    }
+
+    
+
+.send:hover {
+
+    background: #6f6f6f;
+
+    }
+
+    
+
+.send:active,
+
+.send:focus {
+
+    background: #555;
+
+    }
+
+
+
+#masthead {
+
+  
+
+  color: #fff;
+
+  width: 80%;
+
+  padding-top: 0px;
+
+
+
+}
+
+
+
+#nav h3 {
+
+    text-transform: capitalize;
+
+}
+
+
+
+#nav,
+
+#masthead,
+
+#content,
+
+#colophon {
+
+	margin: 0 3.3%;
+
+}
+
+
+
+p, #resume li {
+
+  color: #999999;
+
+  font-size: 1.125em; 
+
+  /*18 / 16 = 1.125em*/
+
+  letter-spacing: .01em;
+
+  line-height: 1.244;
+
+  margin: .612em 0;
+
+  /*1.125 x 1.25 = 1.40625 round down to 1.4*/
+
+  /* 1.4 / 1.125 = 1.244*/
+
+  
+
+}
+
+
+
+section footer {
+
+    clear: both;
+
+    }
+
+
+
+.wrapper {
+
+    padding: 0 .65em;
+
+    -webkit-box-sizing: border-box;
+
+    -moz-box-sizing: border-box;
+
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 45em) {
+
+
+
+  #nav {
+
+    padding: 0;
+
+  }
+
+  
+
+      #nav h3 {
+
+         margin: .39em 1.3em 0 0;
+
+    }
+
+  
+
+      #nav label {
+
+        display: none;
+
+    }
+
+  
+
+      #nav nav {
+
+        height: auto;
+
+        overflow: visible;
+
+    }
+
+  
+
+      #nav ul {
+
+        border: 0;
+
+        margin: 0;
+
+        }
+
+
+
+      #nav li {
+
+        display: inline;
+
+        border: 0;
+
+    }
+
+
+
+      #nav a {
+
+        display: inline-block;
+
+        }
+
+  
+
+  }
+
+
+
+/* ******************************************
+
+    IE 7 and below, legacy browser style fixes
+
+****************************************** */
+
+
+
+.ie .wrapper {
+
+    *behavior: url("http://absolute-path.com/js/boxsizing.htc");
+
+}
+
+
+
+/* Clearfix */
+
+
+
+.group {
+
+    *zoom: 1;
+
+    }
+
+
+
+/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+
+
+
+.group:after {
+
+    content: " "; /* 1 */
+
+    display: table; /* 2 */
+
+    clear: both;
+
+}
+
+
+
+.group {
+
+    *zoom: 1; /* 3 */
+
+    }
+
+
+
+/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+
+
+
+textarea {
+
+
+
+  overflow: auto;
+
+
+
+} 
+
+  
+
+
+
+table {
+
+
+
+  border-collapse: collapse;
+
+  border-spacing: 0px;
+
+
+
+}
+
+ 
+
+ul {
+
+  
+
+  list-style-type: circle;
+
+  
+
+}
+
+
+
+<\!-- Option 2 Add media query support for IE8 and under. Must place media queries in external stylesheet -->
+
+
+
+<\!--[if lt IE 9]><html class="ie"><![endif]-->
+
+<\!--[if gte IE 9]><\!--><html><\!--<![endif]-->
+
+
+
+.ie body{
+
+	width:640px;
+
+	margin:0 auto;
+
+}
+
+
+
+
+
+/*
+
+****************************************************
+
+Font styles
+
+****************************************************
+
+*/
+
+@font-face {
+
+
+
+  font-family: 'Roboto Condensed Light';
+
+    src: url('../fonts/robotocondensed-light-webfont.eot');
+
+    src: url('../fonts/robotocondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('../fonts/robotocondensed-light-webfont.woff') format('woff'),
+
+         url('../fonts/robotocondensed-light-webfont.ttf') format('truetype'),
+
+         url('../fonts/robotocondensed-light-webfont.svg#RobotoCondensedLight') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+
+
+}
+
+
+
+
+
+/*********************************************
+
+Light weight Media Query for images on screen in mobile
+
+*********************************************/
+
+
+
+@media screen only (max-width:320px); {
+
+/*  #rotator {
+
+		  
+
+    background-image: url('http://s17.postimg.org/gnzx83ayj/pick_m.jpg') repeat: none 0 0;
+
+      background-size: contain;
+
+
+
+  }*/
+
+
+
+
+
+  #rotator {
+
+                 background-image:
+
+url('http://s9.postimg.org/ixeweymq3/bannerad_s.jpg') repeat: none 0 0;
+
+    background-size: contain;
+
+    
+
+  }
+
+
+
+  #rotator {
+
+                background-image:
+
+url('http://s16.postimg.org/fcm5bugjl/afterours_s.jpg') repeat: none 0 0;
+
+    background-size: contain;
+
+    
+
+  }
+
+}
+
+
+
+/*********************************************
+
+Medium weight Media Query for images on screen
+
+*********************************************/
+
+
+
+
+
+@media screen only (min-width: 320px) and (max-width: 720px);
+
+		{
+
+/*  #rotator { 
+
+				background-image: url('http://s17.postimg.org/hesndvdbv/picks_l.jpg')  repeat: none 0 0;
+
+			}*/
+
+  
+
+  #rotator {
+
+                background-image:
+
+url('http://s9.postimg.org/daijhhk7f/bannerad_m.jpg') repeat: none 0 0;
+
+        background-size: contain;
+
+
+
+  }
+
+  
+
+  #rotator {
+
+                background-image:
+
+url('http://s16.postimg.org/qdhagv8sh/afterours_m.jpg') repeat: none 0 0;  
+
+    background-size: contain;
+
+  }
+
+  
+
+    #rotator {
+
+              background-image: url('http://s23.postimg.org/6jrpxxxcn/banner_02_m.jpg') repeat: none 0 0;
+
+    background-size: contain;
+
+  }
+
+
+
+		}
+
+
+
+/*********************************************
+
+Heavy weight Media Query for images on screen
+
+*********************************************/
+
+
+
+@media screen only (min-width: 720px);
+
+		{
+
+#rotator {
+
+				background-image: url('http://s9.postimg.org/qtzdn6y6j/bannerad_l.jpg') repeat: none 0 0;
+
+                background-size: contain;
+
+
+
+  }
+
+  
+
+  /*#rotator {
+
+				background-image: url('http://s17.postimg.org/bt689tcmz/picks_xl.jpg') repeat: none 0 0;
+
+			}*/
+
+  
+
+  #rotator {
+
+				background-image: url('http://s16.postimg.org/zb20e818h/afterours_l.jpg') repeat: none 0 0;
+
+                background-size: contain;
+
+
+
+			}
+
+  
+
+  #rotator {
+
+    background-image: url('http://s23.postimg.org/z2wbdr2tz/banner_01_l.jpg') repeat: none 0 0;
+
+    background-size: contain;
+
+  }
+
+  
+
+  #rotator {
+
+              background-image: url('http://s23.postimg.org/6jrpxxxcn/banner_02_l.jpg') repeat: none 0 0;
+
+              background-size: contain;
+
+  }
+
+}
+
+
+
+---------------------------			
+
+MEDIA QUERY FOR BACKGROUND IMAGE WHEN GREATER THAN 45 EM (720PX)
+
+---------------------------
+
+	@media screen and (min-width: 45em) {
+
+			#container-header {
+
+			    background: #352a38 url("http://s28.postimg.org/aup0xqauh/d_fikx-l.jpg") no-repeat top center;
+
+				-webkit-background-size: cover;
+
+			    -moz-background-size: cover;
+
+			    background-size: cover;
+
+				padding: 5% 0;
+
+			}
+
+		}
+
+
+
+---------------------------			
+
+MEDIA QUERY FOR BACKGROUND IMAGE WHEN LESS THAN 45 EM (720PX)
+
+---------------------------
+
+@media screen and (max-width: 45em) {
+
+		#container-header {
+
+		    background: #352a38 url("#") no-repeat top center;
+
+			-webkit-background-size: cover;
+
+		    -moz-background-size: cover;
+
+		    background-size: cover;
+
+			padding: 5% 0;
+
+		}
+
+  
+
+#portfolio figure {
+
+      max-width: 25em;
+
+	}
+
+}
+
+
+
+/* Headshot */
+
+
+
+#dfikx {
+
+    background: #352a38 url("http://http://s13.postimg.org/4iruszk2r/d_fikx.jpg-s") no-repeat top center;
+
+    box-shadow: none;
+
+    width: 20%;
+
+    height: 0;
+
+    padding-bottom: 5% 0;
+
+    padding-top: 0px;
+
+    
+
+    }
+
+
+
+#masthead h3 {
+
+  margin-left: 18%;
+
+  margin-top: 18%;
+
+}
+
+
+
+/* ****************************************************
+
+Media Queries for screen widths wider than 45em (720pixels)
+
+****************************************************
+
+*/
+
+
+
+	@media screen and (min-width: 45em){
+
+		
+
+	    body {
+
+	        font-size: 107.142857142857%;
+
+            /*1.5/1.4=107.142857142857*/
+
+	        }
+
+  
+
+  #masthead {
+
+    
+
+    max-width: 40em;
+
+    
+
+  }
+
+  
+
+   #nav,
+
+        #masthead,
+
+        #content,
+
+        #colophon {
+
+            margin: 0 5.5%;
+
+        }
+
+
+
+	    #portfolio article,
+
+	    #resume article {
+
+		    float:left;
+
+		    width:33%;
+
+	}
+
+  
+
+  .name, .email {
+
+    float: left;
+
+    width: 50%;
+
+    -webkit-box-sizing: border-box;
+
+    -moz-box-sizing: border-box;
+
+    box-sizing: border-box;
+
+    }
+
+    
+
+.name {
+
+    padding-right: .65em;
+
+    }
+
+    
+
+.email {
+
+    padding-left: .65em;
+
+    }
+
+    
+
+.send {
+
+    width: 48.6%;
+
+    }
+
+  
+
+  #nav, 
+
+  #masthead,
+
+  #content,
+
+  #colophon {
+
+            margin: 0 5.5%;
+
+  
+
+}
+
+
+
+/* ****************************************************
+
+Media Queries for screen widths wider than 60em (960pixels)
+
+****************************************************
+
+*/
+
+
+
+@media (min-width: 60em) {
+
+
+
+.name, .email {
+
+    padding-right: 1.4em;
+
+    padding-left: 0;
+
+    clear: both;
+
+    }
+
+    
+
+.message textarea {
+
+    width: 50%;
+
+    }
+
+    
+
+.send {
+
+    width: 25%;
+
+    margin-left: 50%;
+
+    }
+
+  
+
+/* Form Fixes, IE7 and below */
+
+  
+
+  .ie .message textarea {
+
+    *width: 49.9%;
+
+    }
+
+
+
+.ie .send {
+
+    *margin-left: 46.7%;
+
+    }
+
+    
+
+}
+
+
+
+
+
+  
+
+/* ******************************************
+
+	Print Styles
+
+****************************************** */
+
+  
+
+@media print and (max-width: 8.5in){
+
+	
+
+	#masthead {
+
+		color:black;
+
+	}
+
+	
+
+	#container-header {
+
+		height: auto;
+
+	}
+
+	
+
+	img {
+
+		width:2in;
+
+	}
+
+	
+
+	#portfolio	{
+
+		float:left;
+
+		width:45%;
+
+	}
+
+	
+
+	#resume	{
+
+		float:right;
+
+		width:45%;
+
+	}
+
+	
+
+	#container-footer	{
+
+		clear:both;
+
+	}
+
+	
+
+}
+
+
+
+/* Figures/Images */
+
+
+
+.ie #portfolio figure {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    }
+
+
+
+/* "*" hack applies only to IE7 and below */
+
+
+
+.ie #portfolio figure {
+
+    *width: auto;
+
+    }
+
+   
+
+/* Navigation */
+
+
+
+/* IE8 .checked class for checkbox.js */
+
+
+
+#nav input[type=checkbox].checked ~ nav {
+
+    height: auto;
+
+    overflow: visible;  
+
+}
+
+
+
+/* Always show nav, IE7 and below */
+
+
+
+.ie #nav nav {
+
+    *height: auto;
+
+    *overflow: visible;  
+
+}
+
+
+
+/* Hide navicon, IE7 and below */
+
+
+
+.ie #nav label { 
+
+    *background: none;
+
+    }
+
+     
+
+/* box-sizing polyfill, IE7 and below (The URL in .ie textarea is placeholder only. You will need to replace with path to your domain) */
+
+
+
+.ie .wrapper,
+
+.ie .name,
+
+.ie .email,
+
+.ie input,
+
+.ie textarea {
+
+    *behavior: url("jd.grafikx@gmail.com");
+
+}
+</style>
+</head>
+      
+	<body lang="en">
+      <div id="container-nav"> 
+		<section id="nav" class="wrapper">
+           <h3>Benjamin Doyle</h3>        
+                  <!-- Checkbox Hack markup -->
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" onclick>Menu</label>
+        <!-- /Checkbox Hack markup -->
+          
+        <nav>
+          <ul>
+            <li><a href="#">Photography</a></li>
+            <li><a href="http://jsbin.com/hisapi">Projects</a></li>
+            <li><a href="http://jsbin.com/AKeWarOD">Profile</a></li>
+            <li><a href="mailto:jd.grafikx@gmail.com?Subject=Hello%20again" target="_top">Contact</a></li>
+            <li><a href="#">Research</a>
+            <li><a href="https://www.scribd.com/dfikx">Writing</a></li>
+            <li><a href="#resume">Resume</a></li>
+          <li><a href="http://www.linkedin.com/pub/jamin-doyle/18/130/529">LinkedIn</a></li>
+          </ul>
+        </nav>
+		</section>
+      </div>
+      
+      <div id="container-header">
+      <figure id="dfikx">
+        <div data-picture data-alt="dfikx">
+        <div data-src="http://s28.postimg.org/aup0xqauh/d_fikx-s.jpg"></div>
+        <div data-src="http://s28.postimg.org/aup0xqauh/d_fikx-m.jpg" data-media="(min-width: 45em)"></div>
+        <div data-src="http://s28.postimg.org/aup0xqauh/d_fikx-l.jpg" data-media="(min-width: 60em)"></div>
+        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+        <noscript>
+            <img src="http://s28.postimg.org/aup0xqauh/d_fikx-xl.jpg" alt="dfikx">
+        </noscript>
+    </div>
+          </figure>
+        <div id="rotator">
+
+          <a href="#" target="_self"><img src="http://s15.postimg.org/9mipra7y3/IMAG_XL_0349.jpg"/></a>
+          
+          <a href="#" taret="_self"><imag src="http://s3.postimg.org/p4ril68lf/IMAG_XL_0459.jpg"/></a>
+          
+          <a href="#" target="_self"><img src="http://s10.postimg.org/hjv177hrt/IMAG_XL_0347.jpg"/></a>
+
+          <!--edit<a href="#" target="_self"><img src="http://s23.postimg.org/z2wbdr2tz/banner_01_l.jpg" alt="banner"/></a>
+          <a href="#" target="_self"><img src="http://s22.postimg.org/66xamd32p/bannerad.jpg" alt="banner"/></a>
+          <a href="#" target="_self"><img src="http://s23.postimg.org/6jrpxxxcn/banner_02_l.jpg"/></a>
+          <a href="#" target="_self"><img src="http://s2.postimg.org/exhur173d/afterhour.jpg" alt="banner ad"/></a>out!-->          
+        </div>
+        
+        <header id="masthead">
+          
+          <h3><strong>"Hi</strong>, <b>I am: an Indie Indy digital media <i>designer/developer</i>; an independent contractor—concentrating with a focus on <i>GUID/UIXD</i>...."</b></h3> <!-- specializing in front-end development and, human &amp; computer interaction...."!-->
+          
+			</header>
+        </div>
+      
+      <div id="container-article">
+			<article id="group wrapper">
+                <section id="portfolio" class="group">
+                  <iframe width="100%" height="80" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225493360&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                     
+                  <header class="wrapper">
+                     <h1>MOXB: MWXT;</h1><h2>Local/Regional—Mixtape Projects #DEFENDRECORDS</h2>
+                  </header>
+                  <hr>
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#theWhiteStripes</h3>
+                    </header>
+                      
+                    <a href="#" target="_self"/><image src="http://s14.postimg.org/f65pohiap/BASF_Limited_Ed_Coca_Cola_90_B_Side_MCi_Pj_H_1210.jpg"?></a>  
+                      
+                      <figcaption><h3>#</h3></figcaption>
+                        </figure>
+                      </article>
+                    <br />
+                    <article class="group wrapper">
+                      <header><h3>#defendDetroit</h3></header>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204963836&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204964095&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204963463&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <!--<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/216539808&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>!-->
+                      </article>
+                    </section>
+                  <br />
+                  <br />
+                  <br />
+                  <hr>
+                  
+                  <section id="portolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#defianceOhio</h3>
+                    </header>
+                      
+                      <iframe width="100%" height="245px" scrolling="no" frameborder="no" src="http://bandcamp.com/EmbeddedPlayer/album=2373201540/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://defianceohio.bandcamp.com/album/defiance-ohio-the-calling-ep">Defiance, Ohio - The Calling EP by Defiance, Ohio</a></iframe>
+                      
+                      <figcaption><h4>#defendDefiance</h4></figcaption>
+                      </figure>
+                      </article>
+                  </section>
+                      <br />
+                      <br />
+                      <br />
+                  <hr>
+                  
+                    <section id="portfolio" class="group">
+                    <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#theBlackKeys</h3>
+                    </header>
+                      
+                      <a href="#" target="_self"/><image src="http://s16.postimg.org/lwz26nt11/mce_fx_m46.jpg"?></a>
+                      
+                      <figcaption><h4>#</h4></figcaption>
+                      </figure>
+                  </article>
+                  <br />    
+                  <article class="group wrapper">
+                    <header><h3>#defendAkron</h3></header>
+                      
+                     <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/192144227&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/160262260&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      </article>
+                  </section>
+                      <br />
+                      <br />
+                      <br />
+                      <hr>
+                  
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#brittanyLeeMoffitt</h3>
+                    </header>
+                      
+                      <!--<iframe width="100%" height="250" src="http://www.youtube.com/embed/i6ABZb3_Xc0" frameborder="0" allowfullscreen></iframe>!-->
+                      
+                      <a href="#" target="_self"/><image src="http://s16.postimg.org/gi26uckvp/fuji_cdfan1_60.jpg"/></a>
+
+<figcaption><h4>#</h4></figcaption>
+                    </figure>
+                  </article>
+              <br />
+              <article class="group wrapper">
+                <header><h3>#defendSouthBend</h3></header>
+                    
+<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180825036&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180825032&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180825034&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+                      <!--<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180735884&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177713264&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>!-->
+                      </article>
+                  </section>
+                      <br />
+                      <br />
+                      <br />
+                      <hr>
+              
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#cloudCult</h3>
+                    </header>
+                      
+                      <!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/udWIFQgAcYQ" frameborder="0" allowfullscreen></iframe>!-->
+                      
+                      <a href="#" target="_self"><image src="http://s28.postimg.org/b0y163yq5/tdk_ma_x_90.jpg"/></a>
+ 
+                      <figcaption><h4>#</h4></figcaption>
+                    </figure>
+              </article>
+              <br />
+              <article class="group wrapper">
+                <header><h3>#defendDelueth<h3></header>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212641478&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212641453&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212643492&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+                      <!--<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212643484&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                      
+                      <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212641461&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>!-->
+                      </article>
+                  </section>
+                <br />
+                <br />
+                <br />
+                <hr>
+                
+               
+                    <!--<article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#kingsOfLeon</h3>
+                    </header>
+                      
+                      
+                      
+                      <figcaption><h4></h4></figcaption><p></p>
+                      </figure>
+                      </article>!--> 
+                       
+                  
+                  <section id="portfolio" class="group">
+                    <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#theGoDown</h3>
+                      </header>
+                      
+                      <a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s30.postimg.org/7vwgy8l4h/goldstar_bf60_2_081022.jpg"/></a>
+                      
+                      <figcaption><h4>#</h4></figcaption>
+                      </figure>
+                    </article>
+                    <br />
+                    <article class="group wrapper">
+                      <header><h3>#defendChicago</h3></header>
+                  
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/74783232&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/74782871&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/35187272&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      </article>
+                      </section>
+                    <br />
+                    <br />
+                    <br />
+                    <hr>
+                
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#castorAndPollux</h3>
+                    </header>
+                      
+                      <a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s15.postimg.org/k0ib3az7v/fuji_fl90_090802.jpg"/></a>
+                      
+                      <figcaption><h4>#</h4></figcaption>
+                    </figure>
+                    </article>
+                    <br />
+                    <article class="group wrapper">
+                      <header><h3>#defendChicago</h3></header>  
+                      
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/28534882&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                  
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/28533768&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/28532337&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <!--<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/28528657&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>!-->
+                      </article>
+                    </section>
+                    <br />
+                    <br />
+                    <br />
+                    <hr>
+                
+                    <section id="portfolio" class="group">
+                    <article class="group wrapper">
+                    <figure>
+                    <header>
+                      <h3>#nobleLiar</h3>
+                      </header>
+                      
+                      <a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s24.postimg.org/99bio9m5x/3_M_C60_23_04_2011.jpg"/></a>
+                      
+                      <figcaption><h4>#</h4></figcaption>
+                      </figure>
+                      </article>
+                <br />
+                <article class="group wrapper">
+                  <header><h3>#defendSouthBend</h3></header>
+                      
+                      <iframe width="100%" height="90" src="http://media.myspace.com/play/song/backburner-23573613-23374798" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      
+                      <iframe width="100%" height="90" src="http://media.myspace.com/play/song/let-it-go-23580234-23381419" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      
+                      <iframe width="100%" height="90" src="http://media.myspace.com/play/song/love-away-23580233-23381418" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      
+                      <!--<iframe width="100%" height="90" src="http://media.myspace.com/play/song/playing-house-23579580-23380765" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>!-->
+
+                  </article>
+                </section>
+                    <br />
+                    <br />
+                    <br />
+                    <hr>
+
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                  <figure>
+                    <header>
+                      <h3>#strandOfOaks</h3>
+                    </header>
+                 
+                    
+                    <a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s30.postimg.org/xgr3jb8n5/sony_metal_master_60_1.jpg"/></a>
+                      
+                  <figcaption><h4>#</h4></figcaption>
+                    </figure>
+                    </article>    
+                    <br />
+                    <article class="group wrapper">
+                      <header><h3>#defendGoshen</h3></header>
+                      
+                 <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/54127430&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                    <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/148571306&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                    
+                    <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/140405792&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                    
+                                        <!--<iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/54127427&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                    
+                    <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/54127432&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                    
+                    <iframe width="100%" height="85" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/54127431&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>!-->
+                  </article>
+                    </section>
+                    <br />
+                    <br />
+                    <br />
+                    <hr>
+                    
+                <section id="portfolio" class="group">
+                <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>#murderByDeath</h3>
+                      </header>
+                      
+<a href="http://www.tapedeck.org/index.php" target="_blank">
+<img src="http://s9.postimg.org/6m8e54jlb/gold_international_c_60.jpg"/></a>
+                      
+                      <figcaption><h4>#</h4></figcaption>
+                  </figure>
+                    </article>
+                  <br />
+                  <article class="group wrapper">
+                    <header><h3>#defendBloomington</h3></header>
+                      
+<iframe width="100%" height="90" src="http://media.myspace.com/play/song/brother-29463716-29438307" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>              
+
+<iframe width="100%" height="90" src="http://media.myspace.com/play/song/dynamite-mine-29463717-29438308" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      
+<iframe width="100%" height="90" src="http://media.myspace.com/play/song/white-noise-66682649-98795699" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>
+                      
+<!--<iframe width="100%" height="90" src="http://media.myspace.com/play/song/dead-men-and-sinners-29463715-29438306" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>!-->                            </article>
+                  </section>
+                  <br />
+                  <br />
+                  <br />
+                  <hr>
+                      
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                    <header>
+                          <h3>#FreddieBunz</h3>
+                    </header>
+                      
+                    <a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s29.postimg.org/552gt5krb/intersound_fe_90.jpg"/></a>
+                      
+                  <figcaption><h4>#</h4></figcaption>
+                      </figure>
+                    </article>
+                    <br />
+                    <article class="group wrapper">
+                    <header><h3>#defendNaptown</h3></header>
+                      
+  <td class="td">
+    <iframe width="100%" height="90px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F12751062&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+    
+<iframe width="100%" height="90px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F12750359&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+    
+<iframe width="100%" height="90px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F12750356&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+
+    <!--<iframe width="100%" height="90px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F17662175&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>!-->
+                  </article>
+                    </section>
+                    <br />
+                    <br />
+                    <br />
+                    <hr>
+                    
+                <section id="portfolio" class="group">    
+                <article class="group wrapper">
+                  <figure>
+                    <header>
+                      <h3>#Jascha</h3>
+                    </header>
+                    
+<a href="http://www.tapedeck.org/index.php" target="_blank"></a>
+<img src="http://s28.postimg.org/5rw1ujzwt/sony_walkman_60_081001.jpg"/>
+                    
+<figcaption><h4>#</h4></figcaption>
+                  </figure>
+                    </article>
+                    <br />
+                    <article class="group wrapper">
+                    <header><h3>#defendIndy</h3></header>
+                    
+<iframe width="100%" height="90px" src="https://myspace.com/play/song/waltz-4-56781872-61659357" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        
+<iframe width="100%" height="90px" src="https://myspace.com/play/song/the-devil-s-own-75129624-82872790" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<iframe width="100%" height="90px" src="https://myspace.com/play/song/hide-and-seek-56781978-61659431" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<!--<iframe width="100%" height="90px" src="https://myspace.com/play/song/last-honest-man-56781620-61658960" frameborder="0" allowtransparency="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>!-->
+                  </article>
+                  </section>
+                    <br />
+                    <br />
+                    <br />
+                    <hr>
+                
+                   <section id="portfolio" class="group"> 
+                  <article class="group wrapper">
+                  <figure>
+                    <header>
+                      <h3>#Kaleidoscope Jukebox</h3>
+                    </header>
+                    
+<a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s17.postimg.org/kfyy89xgv/memorex.jpg"/></a>
+                    
+<figcaption><h4>#</h4></figcaption>
+                    </figure>
+                    </article>
+                  <br />
+                  <article class="group wrapper">
+                    <header><h3>#defendNaptown</h3></header>
+                    
+<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F21360813"></iframe>
+
+<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F29515682"></iframe>
+                 
+<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82241718&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                    
+                    <!--<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/81559684&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>!-->
+                  </article>
+              </section>
+              <br />
+              <br />
+              <br />
+              <hr>
+
+                  <section id="portfolio" class="group">
+                  <article class="group wrapper">
+                    <figure>
+                    <header>
+                      <h3>#Shy Guy Says</h3>
+                    </header>
+                      
+       <a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s15.postimg.org/yztxl8khn/memorex_dbs_60.jpg"/></a>
+                      
+<figcaption><h4>#</h4></figcaption>
+                      </figure>
+                    </article>
+                    <br />
+                    <article class="group wrapper">
+                      <header><h3>#defendBloomington</h3></header>
+                      
+<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F29652216"></iframe>
+                      
+<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F82920265"></iframe>
+
+<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97895033&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+<!--<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/90329612&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>!-->
+                  </article>
+                        </section>
+                      <br />
+                      <br />
+                      <br />
+                      <hr>
+                
+                  <section id="portfolio" class="group"> 
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                        <h3>#Oreo Jones</h3>
+                      </header>
+                      
+<a href="http://www.tapedeck.org/index.php" target="_blank"><img src="http://s23.postimg.org/sljj4ymcb/k_mart.jpg"/></a>
+                      
+<figcaption><h4>#</h4></figcaption>
+                    </figure>
+                    </article>
+                    <br />
+                    <article class="group wrapper">
+                        <header><h3>#defendNaptown</h></header>
+                      
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/24650857&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58655407&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                 
+                      <iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58655402&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                      
+                      <!--<iframe width="100%" height="90" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2229832&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>!-->
+                  </article>
+                    </section>
+                        <br />
+                        <br />
+                        <br />
+                        <hr>
+                      
+                     <!--
+                  <article class="group wrapper">
+                  <figure>
+                    <header>
+                      <h3>#HER art</h3>
+                    </header>                            <img src="http://s24.postimg.org/q4uttgbxh/Screenshot_2013_11_13_18_40_55.png"></a>
+                          <figcaption><h4>#Research Writing Site: <br /> Design History; 1880 -- Current</h4></figcaption>
+                          <p>Indiana University Purdue University: Herron College of Arts &amp; Sciences; Her-h214 &amp; Her-H400, Temporary intercampus transfer under consortium agreement for courses in contemporary criticism and, conservation colloquium -- Undergraduate Independent Studies.</p>
+                  </figure>
+                </article>
+                      
+                  <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>Previous Development:</h3>
+                    </header>
+                    
+                          <a href="https://dl.dropboxusercontent.com/u/14086199/jd.Fotografikx/index.html"target="_blank">
+                            <img src="http://s24.postimg.org/zcr0ih0mt/Screen_Shot_2013_12_03_at_10_49_06_AM.png"></a>
+<figcaption><h4>#Personal Site: Professional Development; Portfolio  Projects</h4></figcaption><p>Indiana University: College of Arts &amp; Sciences; Fina-S491, Advanced Color Photography -- An interisciplinary approach, independent study in fine art photography creating HDR constructed reality, critique and photo critisizm of contemporary image representation.</p>
+                  </figure>
+                </article>
+                                    
+                <article class="group wrapper">
+                    <figure>
+                      <header>
+                      <h3>Recent Development:</h3>
+                    </header>
+						
+                      <a href="https://dl.dropboxusercontent.com/u/14086199/jd.grafikx/index.html" target="_blank"><img src="http://s30.postimg.org/d9rgvnadd/screen.jpg"></a>
+<figcaption><h4>#Personal Site: Professional Projects; Portfolio Development</h4></figcaption><p>Indiana University: College of Arts &amp; Sciences; Fina-S452, Graphic Design Problem Solving ll -- Letterpress, Allure of the Handmade, printmaking type spec proofs and posters, Type &amp; image cover series re-design for an interantionally known best seller.</p>
+                  </figure>
+                </article>
+              </section>            
+                
+                
+          <section id="resume" class="group">
+            <header class="wrapper">
+              <h2>My Resume</h2>
+            </header>
+            
+            <article class="wrapper">
+                <div class="box">
+				<h2>Currently</h2>
+                  <h4>Independent Contractor/ <br />Digital Media Designer/Developer</h4>
+                  <p>Account acquisitions and sales; All assets, digital, visual design management and business manager at jd./|[Grafikx]|</p>
+                  
+                  <h4>Contract Front–End–Designer; <br /> Graphical User Interfacing</h4>
+                  <p>jd.Grafikx design &amp; development studio in Indianapolis, IN. </p><p>Clients included: Couponchad.com, Eckim.com and, Livebettercheaper.com.</p>
+                  
+                  <h4>Freelance Photojournalist</h4>
+                  <p>Account acquisitions and sales; All assets, digital, visual design management and business manager at jd./|[Fotografix]| </p>
+                                    
+                  <h4>Paraprofessional</h4>
+				<p>As a Program Aide, I serve low income areas, support for homelessness and, at-risk youth of multiple ethnic origins to sponsor urban development, community enrichment and, neighborhood revitalization.</p>
+                
+                  <h4>Certified Pool Operator</h4>
+                  <p>Supervise all essential personnel; maintain lifeguard schedules; coordinate pool parties; maintain correct chemical levels; keep appropriate swimming pool records; oversee general swimming pool maintenance.</p>
+                  <h4>Unit Commissioner</h4>
+                  <p>Procedure-oriented; catalyst for communications, connecting human resources, discipline organization, direct key operatives, ensure missions success, programming capacity building, project management</p>
+                  
+                  <h4>Water Safety Instructor</h4>
+                  <p>Teaching swim sessions in private lessons for water safety to youths as well as conditioning strength training adults.</p>
+                  
+              </div>
+            </article>
+            <article class="wrapper">                
+				<div class="box">
+                  
+                <h2>Previously</h2>
+                  <h4>Technical Support/ Ingram Micro Mobility</h4>
+                  <p>Recycling. E-waste. Providing customer service, optimizing packaging, order fulfillment, processing products, customization for all mobile devices and, business lifecycle services. Demand. Delivered.</p>
+                  <h4>Contract Graphics/ Production Artist:</h4>
+                <p>Graphics Production Artist/ASI American Signage Solutions;<p>
+                  
+                  <p>At ASI: I employed Adobe CS2 to manage Onyx files in PosterShop troubleshooting a mimaki JV33 plotter.</p>
+
+                  <h4>Brand Ambassador/ <br /> Supporting Feild Manager</h4>
+                  <p>Advertising for entertainment systems and, assets; Business to consumer customers sales, or rather, private account acquisitions and sales; Marketing Wii U™ and Nintendo 2DS™ systems and, games.</p>
+                     
+                  <h4>Brand Ambassador/ <br /> Supporting Field Sales Representative</h4>
+<p>Business to consumer sales representative. Supporting Lead Field Manager. Back to School Special. Free Antivirus Protection. Free Installation. Dedicated signal. Direct access. Brighthouse Connects.</p>
+                  
+                  <h4>Brand Ambassador/ <br /> Supporting Sales Contact:</h4>
+                  <p>24seven Talent Agency;</p>
+                  <p>Advertising for entertainment systems and, assets; Business to consumer customers sales, or rather, private account acquisitions and sales; Marketing Wii U™ and Nintendo 3DS™ systems and, games.</p>                
+                  
+                  <h4>Independent Digital Media Developer:</h4>
+                <p>couponChad, Eckim and, liveBetterCheaper.com;</p>
+                <p>At couponChad, Eckim and, liveBetterCheaper.com, I employed Adobe CS5 to manage a promotional campaign.</p>
+                  
+                  <h4>Contract Digital <br /> Media Design:</h4>
+                  <p>Gannett &amp; Co. Inc.;</p>
+                <p>At Gannett, I managed Adobe CS4 to manage interactive multimedia ads and flash enabled media campaigns.</p>
+                  
+                    <h4>
+                      Advertising, Marketing/ <br /> and, Promotions Intern:
+                    </h4>
+                    <p>
+Oranje Event Planning Services;
+                    </p>
+                    <p>
+As an intern, I was responsible for placing ads, e-mail, marketing and, PR calendar scheduling for promo strolls.</p>
+            </div>
+            </article>
+            
+            <article class="wrapper">
+              <div class="box">
+				<h2>Skills</h2>
+
+				<ul>
+					<li>
+                      <p>
+*&nbsp;&nbsp;.&nbsp;Flash, Illustrator, InDesign, Kuler and, Photoshop
+                      </p>
+                      </li>
+                  <li>
+                    <p>
+*&nbsp;&nbsp;.&nbsp;Ablity to modify sites and designs.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+*&nbsp;&nbsp;.&nbsp;Familiarity with Firefox &amp; developer tools.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      *&nbsp;&nbsp;.&nbsp;Knowledge of CSS3 and HTML5.
+                    </p>
+                    </li>
+                  <li>
+                    <p>
+*&nbsp;&nbsp;.&nbsp;Understanding of twitter bootstrap.
+                  </p>
+                  </li>
+                  <li>
+                  <p>
+*&nbsp;&nbsp;.&nbsp;Working knowledge of javaScript &amp; jQuery.
+                    </p>
+                  </li>
+                    </ul>
+                
+                  </div>
+            </article>
+           
+                  <footer class="wrapper">
+                  <p>Work history, download available</p>
+                </footer>
+            </section>
+          </article>
+          </div> 
+            
+        <div id="container-footer">
+          
+          <form id="contact" action="MAILTO:jd.grafikx@gmail.com" method="post" enctype="text/plain">
+    <fieldset class="wrapper">
+        <legend>Contact</legend>
+            <ul class="group">
+                <li class="name">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" />
+                </li>
+                <li class="email">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" />
+                </li>
+                <li class="message">
+                    <label for="message">Say Hello</label>
+                    <textarea id="message" name="message"></textarea>
+                </li>
+            </ul>
+        <input class="send" type="submit" name="submit" value="Send" />
+    </fieldset>
+</form>!-->
+          <footer id="colophon" class="wrapper">
+              <p>d.Fikx™Circa©2015</p>
+			</footer>
+        </div>
+	<script id="jsbin-javascript">
+/*
+
+  * Normalized hide address bar for iOS & Android
+
+  * (c) Scott Jehl, scottjehl.com
+
+  * MIT License
+
+*/
+
+(function( win ){
+
+	var doc = win.document;
+
+	
+
+	// If there's a hash, or addEventListener is undefined, stop here
+
+	if( !location.hash && win.addEventListener ){
+
+		
+
+		//scroll to 1
+
+		window.scrollTo( 0, 1 );
+
+		var scrollTop = 1,
+
+			getScrollTop = function(){
+
+				return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
+
+			},
+
+		
+
+			//reset to 0 on bodyready, if needed
+
+			bodycheck = setInterval(function(){
+
+				if( doc.body ){
+
+					clearInterval( bodycheck );
+
+					scrollTop = getScrollTop();
+
+					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+
+				}	
+
+			}, 15 );
+
+		
+
+		win.addEventListener( "load", function(){
+
+			setTimeout(function(){
+
+				//at load, if user hasn't scrolled more than 20 or so...
+
+				if( getScrollTop() < 20 ){
+
+					//reset to hide addr bar at onload
+
+					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+
+				}
+
+			}, 0);
+
+		} );
+
+	}
+
+})( this );
+
+
+
+/**/
+
+
+
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
+
+window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=a.firstElementChild||a.firstChild,d=e.createElement("body"),g=e.createElement("div");g.id="mq-test-1";g.style.cssText="position:absolute;top:-100em";d.appendChild(g);return function(h){g.innerHTML='&shy;<style media="'+h+'"> #mq-test-1 { width: 42px; }</style>';a.insertBefore(d,b);c=g.offsetWidth==42;a.removeChild(d);return{matches:c,media:h}}})(document);
+
+
+
+/*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with divs). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
+
+
+
+(function( w ){
+
+	
+
+	// Enable strict mode
+
+	"use strict";
+
+
+
+	w.picturefill = function() {
+
+		var ps = w.document.getElementsByTagName( "div" );
+
+		
+
+		// Loop the pictures
+
+		for( var i = 0, il = ps.length; i < il; i++ ){
+
+			if( ps[ i ].getAttribute( "data-picture" ) !== null ){
+
+
+
+				var sources = ps[ i ].getElementsByTagName( "div" ),
+
+					matches = [];
+
+			
+
+				// See if which sources match
+
+				for( var j = 0, jl = sources.length; j < jl; j++ ){
+
+					var media = sources[ j ].getAttribute( "data-media" );
+
+					// if there's no media specified, OR w.matchMedia is supported 
+
+					if( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ){
+
+						matches.push( sources[ j ] );
+
+					}
+
+				}
+
+
+
+              
+
+// Find any existing img element in the picture element
+
+			var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
+
+
+
+			if( matches.length ){			
+
+				if( !picImg ){
+
+					picImg = w.document.createElement( "img" );
+
+					picImg.alt = ps[ i ].getAttribute( "data-alt" );
+
+					ps[ i ].appendChild( picImg );
+
+				}
+
+				
+
+				picImg.src =  matches.pop().getAttribute( "data-src" );
+
+			}
+
+			else if( picImg ){
+
+				ps[ i ].removeChild( picImg );
+
+			}
+
+		}
+
+		}
+
+	};
+
+	
+
+// Run on resize and domready (w.load as a fallback)
+
+	if( w.addEventListener ){
+
+		w.addEventListener( "resize", w.picturefill, false );
+
+		w.addEventListener( "DOMContentLoaded", function(){
+
+			w.picturefill();
+
+			// Run once only
+
+			w.removeEventListener( "load", w.picturefill, false );
+
+		}, false );
+
+		w.addEventListener( "load", w.picturefill, false );
+
+	}
+
+	else if( w.attachEvent ){
+
+		w.attachEvent( "onload", w.picturefill );
+
+	}
+
+	
+
+}( this ));
+
+
+
+/*
+
+	Image Cross Fade Redux
+
+	Version 1.0
+
+	Last revision: 02.15.2006
+
+	steve@slayeroffice.com
+
+
+
+	Rewrite of old code found here: http://slayeroffice.com/code/imageCrossFade/index.html
+
+*/
+
+
+
+window.addEventListener?window.addEventListener('load',so_init,false):window.attachEvent('onload',so_init);
+
+
+
+var d=document, imgs = new Array(), zInterval = null, current=0, pause=false;
+
+
+
+function so_init()
+
+{
+
+	if(!d.getElementById || !d.createElement)return;
+
+
+
+	css = d.createElement('link');
+
+	css.setAttribute('href','/assets/css/slideshow2.css');
+
+	css.setAttribute('rel','stylesheet');
+
+	css.setAttribute('type','text/css');
+
+	d.getElementsByTagName('head')[0].appendChild(css);
+
+
+
+	imgs = d.getElementById('rotator').getElementsByTagName('img');
+
+	for(i=1;i<imgs.length;i++) imgs[i].xOpacity = 0;
+
+	imgs[0].style.display = 'block';
+
+	imgs[0].xOpacity = .99;
+
+
+
+	setTimeout(so_xfade,5000);
+
+}
+
+
+
+function so_xfade()
+
+{
+
+	cOpacity = imgs[current].xOpacity;
+
+	nIndex = imgs[current+1]?current+1:0;
+
+	nOpacity = imgs[nIndex].xOpacity;
+
+
+
+	cOpacity-=.05;
+
+	nOpacity+=.05;
+
+
+
+	imgs[nIndex].style.display = 'block';
+
+	imgs[current].xOpacity = cOpacity;
+
+	imgs[nIndex].xOpacity = nOpacity;
+
+
+
+	setOpacity(imgs[current]);
+
+	setOpacity(imgs[nIndex]);
+
+
+
+	if(cOpacity<=0)
+
+	{
+
+		imgs[current].style.display = 'none';
+
+		current = nIndex;
+
+		setTimeout(so_xfade,11000);
+
+	}
+
+	else
+
+	{
+
+		setTimeout(so_xfade,50);
+
+	}
+
+
+
+	function setOpacity(obj)
+
+	{
+
+		if(obj.xOpacity>.99)
+
+		{
+
+			obj.xOpacity = .99;
+
+			return;
+
+		}
+
+
+
+		obj.style.opacity = obj.xOpacity;
+
+		obj.style.MozOpacity = obj.xOpacity;
+
+		obj.style.filter = 'alpha(opacity=' + (obj.xOpacity*100) + ')';
+
+	}
+
+}
+
+
+
+// JavaScript Document
+</script>
+</body>
+</html>
