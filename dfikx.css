@@ -1,0 +1,939 @@
+/*dfikx.css*/
+
+
+
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+	Normalize CSS
+	http://necolas.github.com/normalize.css/
+
+
+html {
+	font-size: 100%; /* 100% = 16px*/
+    line-height: 1;
+    height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+body {
+
+    min-height: 100%;
+	font-size: 100%;
+  
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+
+  display: block;
+
+}
+
+sub,
+sup {
+
+  font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+
+}
+
+sup {
+
+  top: -0.5em;
+
+}
+
+sub {
+
+  bottom: -0.25em;
+
+}
+
+pre {
+
+    white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+
+}
+
+b,
+strong {
+
+  font-weight: bold;
+
+}
+
+abbr[title] {
+
+  border-bottom: 1px dotted;
+
+}
+
+input,
+textarea,
+button,
+select {
+
+    margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+
+    cursor: pointer;
+	-webkit-appearance: button;
+
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF530D;
+}
+
+body { 
+    -webkit-animation: bugfix infinite 1s; 
+}
+
+body {
+  
+  font-family: "Roboto Condensed Light" , "Helvetica Neue" , Helvetica, sans-serif;
+}
+
+.box {
+
+  padding:14px;
+  position: relative;
+
+}
+
+.box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.box h2 {
+  
+  color: #352a38;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+  
+}
+
+.box h4 {
+    color: #352a38;
+    border-top: 4px double #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.56;
+    text-transform: uppercase;
+    margin-bottom: .975em; /* 3/4 of 1.3 */
+    text-align: center;
+    letter-spacing: .024em;
+    position: relative;
+}
+
+@-webkit-keyframes bugfix {
+    from {padding: 0;} 
+    to {padding: 0;} 
+}
+
+#container-article {
+  
+  background-color: #ffffff;
+  position: relative;
+  background: #fff;
+  -moz-box-shadow: 0 0 .5em .5em rgba( 0, 0, 0, .5 );
+  -webkit-box-shadow: 0 0 .5em .5em rgba( 0, 0, 0, .5 );
+  box-shadow: 0 0 .5em .5em rgba( 0, 0, 0, .1 );
+  padding: .975em; /* 3/4 of 1.3 */
+}
+
+#container-footer {
+  
+  background: #352a38;
+  color: #eee;
+  font-weight: 100;
+  padding: 32px 0px;
+  position: relative;
+}
+
+#container-header {
+  
+  background: #352a38;
+  background-size: contain;
+  height: 300px;
+  width: 100%;
+  margin-top: 0 0 0 0;
+  position: relative;
+  z-index: -1;
+}
+
+#content, #colophon, #masthead, #nav {
+  
+  margin: 0 18px;
+  position: relative;
+}
+
+#container-nav {
+  
+  background: #ffffff;
+  padding-top: 0px;
+  position: relative;
+  
+}
+
+#nav input[type=checkbox]:checked ~ nav {
+    height: auto;
+    overflow: hidden;  
+}
+
+#nav input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+
+#nav a {
+   display: block;
+   font-size: 1.063em;
+   color: #333;
+   text-decoration: none;
+   padding: .975em 1.3em; 
+}
+
+#nav a:hover {
+   background: #f8f8f8;
+}
+
+#nav nav {
+    height: 0;
+    overflow: hidden;
+}
+
+#nav h3 {
+    float: left;
+    text-transform: capitalize; 
+}
+
+#nav label { 
+    display: block;
+    background: url("http://s27.postimg.org/idd4sief3/icon_menu.png") no-repeat right center;
+    text-indent: -999em;
+    cursor: pointer;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+#nav li {
+   border-top: 1px solid #eee;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    margin: .35em 0 .30em;
+}
+
+
+#colophon {
+  
+}
+
+figure,
+.box {
+    background: #ffffff;
+    -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+    -webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+    box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+    padding: .975em; /* 3/4 of 1.3 */
+    position: relative;
+}
+
+/* Form / Basic Layout */
+
+form {
+    padding: 0 0 1.3em;
+    position: relative;
+    z-index: 1;
+    }
+    
+form ul {
+    list-style: none;
+    padding: 1.3em 0 0;
+    }
+    
+form li {
+    padding: 0 0 .65em;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  letter-spacing: .03em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+h1 {
+    color: #352a38;
+    font-size: 3.375em;
+    /* 3 x 1.125 = 3.375*/
+    line-height: 1.25;
+    /*  20px / 16 = 1.25em*/
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+    }	
+
+h2 {
+    color: #352a38;
+    font-size: 2.25em;
+    /* 2 x 1.125 = 2.25em */
+    line-height: 1.244;
+    }
+
+h3{
+  color: #352a38;
+  font-size: 1.575em;
+  /* 1.125 x 1.4 = 1.575 */
+  line-height: 1.1;
+  /* 1.4+.65=2.05-.325=1.725/1.575=1.0952380952381*/
+}
+
+figcaption, h4 {
+    color: #352a38;
+    font-family: Baskerville;
+    font-size: 1em;
+    line-height: 1.56;
+    text-transform: uppercase;
+}
+
+#portfolio, h4 {
+    line-height: 1.82;
+}
+
+#portfolio h5, h6 {
+  
+    color: #352a38;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: .85em;
+	line-height: 1.53;
+					}
+	
+img {
+  
+  max-width: 100%;
+
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.3;
+	font-weight: 500;
+    padding: .65em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+legend {
+	font-size: 1.382em; 
+	line-height: 1.223;
+	}
+		    
+label {
+    display: block;
+	font-size: 1em;
+	line-height: 1.56;
+    padding: 0 0 .325em;
+	}
+		
+legend, label {      
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #fff;
+	}
+	
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    padding-bottom: 10%;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    }
+
+.send {
+    display: inline-block;
+    max-width: 30em;
+    font-size: 1em;
+    line-height: 1;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background: #0074b0;
+    margin: .65em .26em;
+    padding: .975em;
+    border: 0;
+    border-radius: 1.3em;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
+    }
+    
+.send:hover {
+    background: #6f6f6f;
+    }
+    
+.send:active,
+.send:focus {
+    background: #555;
+    }
+
+#masthead {
+  
+  color: #fff;
+  width: 80%;
+  padding-top: 0px;
+
+}
+
+#nav h3 {
+    text-transform: capitalize;
+}
+
+#nav,
+#masthead,
+#content,
+#colophon {
+	margin: 0 3.3%;
+}
+
+p, #resume li {
+  color: #999999;
+  font-size: 1.125em; 
+  /*18 / 16 = 1.125em*/
+  letter-spacing: .01em;
+  line-height: 1.244;
+  margin: .612em 0;
+  /*1.125 x 1.25 = 1.40625 round down to 1.4*/
+  /* 1.4 / 1.125 = 1.244*/
+  
+}
+
+section footer {
+    clear: both;
+    }
+
+.wrapper {
+    padding: 0 .65em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (min-width: 45em) {
+
+  #nav {
+    padding: 0;
+  }
+  
+      #nav h3 {
+         margin: .39em 1.3em 0 0;
+    }
+  
+      #nav label {
+        display: none;
+    }
+  
+      #nav nav {
+        height: auto;
+        overflow: visible;
+    }
+  
+      #nav ul {
+        border: 0;
+        margin: 0;
+        }
+
+      #nav li {
+        display: inline;
+        border: 0;
+    }
+
+      #nav a {
+        display: inline-block;
+        }
+  
+  }
+
+/* ******************************************
+    IE 7 and below, legacy browser style fixes
+****************************************** */
+
+.ie .wrapper {
+    *behavior: url("http://absolute-path.com/js/boxsizing.htc");
+}
+
+/* Clearfix */
+
+.group {
+    *zoom: 1;
+    }
+
+/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+
+.group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    clear: both;
+}
+
+.group {
+    *zoom: 1; /* 3 */
+    }
+
+/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+
+textarea {
+
+  overflow: auto;
+
+} 
+  
+
+table {
+
+  border-collapse: collapse;
+  border-spacing: 0px;
+
+}
+ 
+ul {
+  
+  list-style-type: circle;
+  
+}
+
+<!-- Option 2 Add media query support for IE8 and under. Must place media queries in external stylesheet -->
+
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+
+.ie body{
+	width:640px;
+	margin:0 auto;
+}
+
+
+/*
+****************************************************
+Font styles
+****************************************************
+*/
+@font-face {
+
+  font-family: 'Roboto Condensed Light';
+    src: url('../fonts/robotocondensed-light-webfont.eot');
+    src: url('../fonts/robotocondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotocondensed-light-webfont.woff') format('woff'),
+         url('../fonts/robotocondensed-light-webfont.ttf') format('truetype'),
+         url('../fonts/robotocondensed-light-webfont.svg#RobotoCondensedLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*********************************************
+Light weight Media Query for images on screen in mobile
+*********************************************/
+
+@media screen only (max-width:320px); {
+/*  #rotator {
+		  
+    background-image: url('http://s17.postimg.org/gnzx83ayj/pick_m.jpg') repeat: none 0 0;
+      background-size: contain;
+
+  }*/
+
+
+  #rotator {
+                 background-image:
+url('http://s9.postimg.org/ixeweymq3/bannerad_s.jpg') repeat: none 0 0;
+    background-size: contain;
+    
+  }
+
+  #rotator {
+                background-image:
+url('http://s16.postimg.org/fcm5bugjl/afterours_s.jpg') repeat: none 0 0;
+    background-size: contain;
+    
+  }
+}
+
+/*********************************************
+Medium weight Media Query for images on screen
+*********************************************/
+
+
+@media screen only (min-width: 320px) and (max-width: 720px);
+		{
+/*  #rotator { 
+				background-image: url('http://s17.postimg.org/hesndvdbv/picks_l.jpg')  repeat: none 0 0;
+			}*/
+  
+  #rotator {
+                background-image:
+url('http://s9.postimg.org/daijhhk7f/bannerad_m.jpg') repeat: none 0 0;
+        background-size: contain;
+
+  }
+  
+  #rotator {
+                background-image:
+url('http://s16.postimg.org/qdhagv8sh/afterours_m.jpg') repeat: none 0 0;  
+    background-size: contain;
+  }
+  
+    #rotator {
+              background-image: url('http://s23.postimg.org/6jrpxxxcn/banner_02_m.jpg') repeat: none 0 0;
+    background-size: contain;
+  }
+
+		}
+
+/*********************************************
+Heavy weight Media Query for images on screen
+*********************************************/
+
+@media screen only (min-width: 720px);
+		{
+#rotator {
+				background-image: url('http://s9.postimg.org/qtzdn6y6j/bannerad_l.jpg') repeat: none 0 0;
+                background-size: contain;
+
+  }
+  
+  /*#rotator {
+				background-image: url('http://s17.postimg.org/bt689tcmz/picks_xl.jpg') repeat: none 0 0;
+			}*/
+  
+  #rotator {
+				background-image: url('http://s16.postimg.org/zb20e818h/afterours_l.jpg') repeat: none 0 0;
+                background-size: contain;
+
+			}
+  
+  #rotator {
+    background-image: url('http://s23.postimg.org/z2wbdr2tz/banner_01_l.jpg') repeat: none 0 0;
+    background-size: contain;
+  }
+  
+  #rotator {
+              background-image: url('http://s23.postimg.org/6jrpxxxcn/banner_02_l.jpg') repeat: none 0 0;
+              background-size: contain;
+  }
+}
+
+---------------------------			
+MEDIA QUERY FOR BACKGROUND IMAGE WHEN GREATER THAN 45 EM (720PX)
+---------------------------
+	@media screen and (min-width: 45em) {
+			#container-header {
+			    background: #352a38 url("http://s28.postimg.org/aup0xqauh/d_fikx-l.jpg") no-repeat top center;
+				-webkit-background-size: cover;
+			    -moz-background-size: cover;
+			    background-size: cover;
+				padding: 5% 0;
+			}
+		}
+
+---------------------------			
+MEDIA QUERY FOR BACKGROUND IMAGE WHEN LESS THAN 45 EM (720PX)
+---------------------------
+@media screen and (max-width: 45em) {
+		#container-header {
+		    background: #352a38 url("#") no-repeat top center;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    background-size: cover;
+			padding: 5% 0;
+		}
+  
+#portfolio figure {
+      max-width: 25em;
+	}
+}
+
+/* Headshot */
+
+#dfikx {
+    background: #352a38 url("http://http://s13.postimg.org/4iruszk2r/d_fikx.jpg-s") no-repeat top center;
+    box-shadow: none;
+    width: 20%;
+    height: 0;
+    padding-bottom: 5% 0;
+    padding-top: 0px;
+    
+    }
+
+#masthead h3 {
+  margin-left: 18%;
+  margin-top: 18%;
+}
+
+/* ****************************************************
+Media Queries for screen widths wider than 45em (720pixels)
+****************************************************
+*/
+
+	@media screen and (min-width: 45em){
+		
+	    body {
+	        font-size: 107.142857142857%;
+            /*1.5/1.4=107.142857142857*/
+	        }
+  
+  #masthead {
+    
+    max-width: 40em;
+    
+  }
+  
+   #nav,
+        #masthead,
+        #content,
+        #colophon {
+            margin: 0 5.5%;
+        }
+
+	    #portfolio article,
+	    #resume article {
+		    float:left;
+		    width:33%;
+	}
+  
+  .name, .email {
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    
+.name {
+    padding-right: .65em;
+    }
+    
+.email {
+    padding-left: .65em;
+    }
+    
+.send {
+    width: 48.6%;
+    }
+  
+  #nav, 
+  #masthead,
+  #content,
+  #colophon {
+            margin: 0 5.5%;
+  
+}
+
+/* ****************************************************
+Media Queries for screen widths wider than 60em (960pixels)
+****************************************************
+*/
+
+@media (min-width: 60em) {
+
+.name, .email {
+    padding-right: 1.4em;
+    padding-left: 0;
+    clear: both;
+    }
+    
+.message textarea {
+    width: 50%;
+    }
+    
+.send {
+    width: 25%;
+    margin-left: 50%;
+    }
+  
+/* Form Fixes, IE7 and below */
+  
+  .ie .message textarea {
+    *width: 49.9%;
+    }
+
+.ie .send {
+    *margin-left: 46.7%;
+    }
+    
+}
+
+
+  
+/* ******************************************
+	Print Styles
+****************************************** */
+  
+@media print and (max-width: 8.5in){
+	
+	#masthead {
+		color:black;
+	}
+	
+	#container-header {
+		height: auto;
+	}
+	
+	img {
+		width:2in;
+	}
+	
+	#portfolio	{
+		float:left;
+		width:45%;
+	}
+	
+	#resume	{
+		float:right;
+		width:45%;
+	}
+	
+	#container-footer	{
+		clear:both;
+	}
+	
+}
+
+/* Figures/Images */
+
+.ie #portfolio figure {
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+/* "*" hack applies only to IE7 and below */
+
+.ie #portfolio figure {
+    *width: auto;
+    }
+   
+/* Navigation */
+
+/* IE8 .checked class for checkbox.js */
+
+#nav input[type=checkbox].checked ~ nav {
+    height: auto;
+    overflow: visible;  
+}
+
+/* Always show nav, IE7 and below */
+
+.ie #nav nav {
+    *height: auto;
+    *overflow: visible;  
+}
+
+/* Hide navicon, IE7 and below */
+
+.ie #nav label { 
+    *background: none;
+    }
+     
+/* box-sizing polyfill, IE7 and below (The URL in .ie textarea is placeholder only. You will need to replace with path to your domain) */
+
+.ie .wrapper,
+.ie .name,
+.ie .email,
+.ie input,
+.ie textarea {
+    *behavior: url("jd.grafikx@gmail.com");
+}
