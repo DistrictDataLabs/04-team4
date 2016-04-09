@@ -39,9 +39,11 @@ characterData is a dict with the two letter character ID as keys.  Each characte
          "description":" Parisian student from Toulouse"
       },
       ...
-  </pre>
+</pre>
 
-#####cooccurData
+
+####cooccurData
+
 cooccurData is also a dict with the chapter ID as keys.  Each chapter ID points to a dict with keys "groups", "characters", and "relations". E.g.
 <pre>
 "cooccurData":{ 
