@@ -2,7 +2,7 @@
 <html>
 <meta charset="utf-8">
 <head>
-<title>A Super-Quick Introduction to BioFabric</title>
+<title>Our Super-Quick Introduction to BioFabric</title>
 <style>
 .emph {font-style: italic;}
 .linktext00 {font: 25px sans-serif; fill: #000000; text-anchor: middle;}
@@ -803,13 +803,14 @@ var div = document.getElementById('data');
 div.innerHTML = div.innerHTML +
        "<ul>" +
            "<li>The network is the Les Miserables character graph from: D. E. Knuth, The Stanford GraphBase: A Platform for Combinatorial Computing, Addison-Wesley, Reading, MA (1993).</li>" +
-           '<li>Network data downloaded from: <a href="http://bl.ocks.org/mbostock/raw/4062045/miserables.json">bl.ocks.org</a></li>' +
-           '<li>This demo written using: <a href="http://d3js.org/">D3.js</a></li>' +
-           '<li>BioFabric project page: <a href="http://www.BioFabric.org">www.BioFabric.org</a></li>' +
-           '<li><i>Combing the Hairball</i> blog: <a href="http://biofabric.blogspot.com/">biofabric.blogspot.com</a></li>' +
-           '<li>BioFabric paper in <i>BMC BioInformatics</i>: <a href="http://www.biomedcentral.com/1471-2105/13/275/">http://www.biomedcentral.com/1471-2105/13/275/</a></li>' +
-           '<li>Follow <a href="http://twitter.com/wjrl59">@wjrl59</a> on Twitter for BioFabric news</li>' +
+	   '<li>The d3.js demo is adapted from <a href="http://www.biofabric.org/gallery/pages/SuperQuickBioFabric.html">Super Quick BioFabric Demo</a></li>' +
        "</ul>";
+           //'<li>Network data downloaded from: <a href="http://bl.ocks.org/mbostock/raw/4062045/miserables.json">bl.ocks.org</a></li>' +
+           //'<li>This demo written using: <a href="http://d3js.org/">D3.js</a></li>' +
+           //'<li>BioFabric project page: <a href="http://www.BioFabric.org">www.BioFabric.org</a></li>' +
+           //'<li><i>Combing the Hairball</i> blog: <a href="http://biofabric.blogspot.com/">biofabric.blogspot.com</a></li>' +
+           //'<li>BioFabric paper in <i>BMC BioInformatics</i>: <a href="http://www.biomedcentral.com/1471-2105/13/275/">http://www.biomedcentral.com/1471-2105/13/275/</a></li>' +
+           //'<li>Follow <a href="http://twitter.com/wjrl59">@wjrl59</a> on Twitter for BioFabric news</li>' +
 
 //
 // Here is the D3 import and the guts of the page:
@@ -983,7 +984,7 @@ function myTimer() {
   } else if (clickNum === FINAL_MSG_INIT) {
     nextStepEx(bsvg, "", foo, 2000);
   } else if (clickNum === TEXTA_INIT) {
-    wrapItUp(svg, gheight, gwidth, WRAP_LOC_X, WRAP_FADE);
+    //wrapItUp(svg, gheight, gwidth, WRAP_LOC_X, WRAP_FADE);
   } else if (clickNum === TEXTB_INIT) {
     svg.selectAll(".linktext3").transition().duration(WRAP_FADE * BASE_TRANS).style("opacity", 1);
   } else if (clickNum === TEXTC_INIT) {
