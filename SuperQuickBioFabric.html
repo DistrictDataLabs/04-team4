@@ -816,7 +816,8 @@ div.innerHTML = div.innerHTML +
 // Here is the D3 import and the guts of the page:
 // 
 // WARNING! The code has NOT been tested on different networks! Probably handles singleton nodes and duplicate links incorrectly! 
-d3.json("miserables2.json", function(error, graph) {
+// d3.json("miserables2.json", function(error, graph) {
+d3.json("miserables.json", function(error, graph) {
 
 // Firefox 17 was choking on the direct dx, dy settings, but did OK with the transform. What's up with that?
 
@@ -911,6 +912,7 @@ function restart() {
   clickNum = 0;
   dropAll(svg);
   myVar = setInterval(function(){myTimer()}, ONE_SEC);
+  svg.call(zoom);
 }
 bsvg.on("click", function() {restart();});
 
@@ -946,6 +948,14 @@ var TEXTC_INIT = TEXTB_INIT + TEXTB_DUR + 1;
 var DONE_INIT = TEXTC_INIT + 1;
 var WRAP_FADE = 2;
 
+//*** Johnson's addition
+var zoom = d3.behavior.zoom()
+    .scaleExtent([1, 10])
+    .on("zoom", zoomed);
+       
+function zoomed() {
+  container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+} 
 //
 // The animation!
 //
