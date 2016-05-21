@@ -790,6 +790,23 @@ function foo() {};
 //
 ///////////////////////////////////////////////////////////////////
 
+//*** Johnson's addition
+var x = d3.scale.linear()
+        .domain([-width / 2, width / 2])
+        .range([0, width]);
+
+var y = d3.scale.linear()
+        .domain([-height / 2, height / 2])
+        .range([height, 0]);
+
+var zoom = d3.behavior.zoom()
+    .x(x)
+    .y(y)
+    .scaleExtent([1, 15])
+    .on("zoom", zoomed);
+       
+// d3.select("svg").call(zoom);
+// svg.call(zoom);
 //
 // Locate the SVG component in a centered DIV. Then add the supplemental text below it:
 // 
@@ -797,7 +814,11 @@ function foo() {};
 var bsvg = d3.select(".inner").append("svg:svg")
     .attr("width", width)
     .attr("height", height)
-    .style("background-color", "#FFFFFF");
+    .style("background-color", "#FFFFFF").append("g").call(zoom).append("g");
+
+function zoomed() {
+  bsvg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
 
 var div = document.getElementById('data');
 div.innerHTML = div.innerHTML +
@@ -816,6 +837,7 @@ div.innerHTML = div.innerHTML +
 // Here is the D3 import and the guts of the page:
 // 
 // WARNING! The code has NOT been tested on different networks! Probably handles singleton nodes and duplicate links incorrectly! 
+// d3.json("miserables2.json", function(error, graph) {
 d3.json("miserables2.json", function(error, graph) {
 
 // Firefox 17 was choking on the direct dx, dy settings, but did OK with the transform. What's up with that?
@@ -911,8 +933,9 @@ function restart() {
   clickNum = 0;
   dropAll(svg);
   myVar = setInterval(function(){myTimer()}, ONE_SEC);
+  svg.call(zoom);
 }
-bsvg.on("click", function() {restart();});
+// bsvg.on("click", function() {restart();});
 
 //
 // Here are the time hacks for the animation:
@@ -945,6 +968,7 @@ var TEXTB_DUR = 1;
 var TEXTC_INIT = TEXTB_INIT + TEXTB_DUR + 1;
 var DONE_INIT = TEXTC_INIT + 1;
 var WRAP_FADE = 2;
+
 
 //
 // The animation!
