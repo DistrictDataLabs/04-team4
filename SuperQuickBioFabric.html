@@ -841,7 +841,7 @@ div.innerHTML = div.innerHTML +
 d3.json("miserables2.json", function(error, graph) {
 
 // Firefox 17 was choking on the direct dx, dy settings, but did OK with the transform. What's up with that?
-
+/*
    bsvg.append("svg:text")
        .attr("class", "linktext00")
        .attr("transform", function(d) { return "translate(" + hw + "," + (hh - 50) + ")"; })
@@ -854,7 +854,7 @@ d3.json("miserables2.json", function(error, graph) {
    //  .attr("dx", hw)
    //  .attr("dy", hh + 50)
        .text("BioFabric");
-
+*/
 //
 // Add and initialize some stuff to the graph we read in:
 //
@@ -919,8 +919,8 @@ instantForce(svg, graph, gwidth, gheight);
 //
 
 var postForce = false;
-var myVar = setInterval(function(){myTimer()}, ONE_SEC);
-
+var myVar = setInterval(function(){visualize()}, ONE_SEC);
+// var myVar = setInterval(function(){nextStepEx(bsvg, "", foo, 2000)}, ONE_SEC);
 //
 // This is the function to restart the animation (needs the animation handle!), and the
 // handler to call it:
@@ -974,6 +974,20 @@ var WRAP_FADE = 2;
 // The animation!
 //
 
+function visualize() {
+  buildGraphPost(svg, graph);
+  nextStep(bsvg, "", installForceClosure(svg, gwidth, gheight, sfac, INSTALL_DUR));
+  nextStep(bsvg, "", nodeToLinesClosure(svg, gwidth, POINTS_TO_LINES_DUR));
+  sortGraph(graph);
+  nextStep(bsvg, "", nodesToRowsClosure(svg, NODES_TO_ROWS_DUR));
+  nextStep(bsvg, "", drawGlyphsClosure(svg, graph, GLYPH_DUR));
+  boundNodes(graph);
+  nextStep(bsvg, "", setNodeLength(svg, NODE_LENGTH_DUR));
+  nextStep(bsvg, "", colorNodesAndLinksClosure(svg, 1.43, COLOR_DUR));   
+  nextStepEx(bsvg, "", foo, 2000);
+}
+
+/*
 function myTimer() {
   if (clickNum === ANI_START) {
     if (postForce) {
@@ -1016,7 +1030,7 @@ function myTimer() {
     clearInterval(myVar);
   }
   clickNum++;
-}
+} */
 });
 </script>
 </body>

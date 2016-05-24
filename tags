@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+assignNodesToCircle	SuperQuickBioFabric.html	/^function assignNodesToCircle(myGraph, radius, cx, cy) {$/;"	f
+boundNodes	SuperQuickBioFabric.html	/^function boundNodes(myGraph) {$/;"	f
+buildGraph	SuperQuickBioFabric.html	/^function buildGraph(mySvg, myGraph) {$/;"	f
+buildGraphPost	SuperQuickBioFabric.html	/^function buildGraphPost(mySvg, myGraph) {$/;"	f
+colorNodesAndLinks	SuperQuickBioFabric.html	/^function colorNodesAndLinks(mySvg, val, mySec) {$/;"	f
+colorNodesAndLinksClosure	SuperQuickBioFabric.html	/^function colorNodesAndLinksClosure(mySvg, val, mySec) {$/;"	f
+compareGuys	SuperQuickBioFabric.html	/^function compareGuys(a, b) {$/;"	f
+compareNodes	SuperQuickBioFabric.html	/^function compareNodes(a, b) {$/;"	f
+createSortingHat	SuperQuickBioFabric.html	/^function createSortingHat(myGraph) {$/;"	f
+cycleColor	SuperQuickBioFabric.html	/^function cycleColor(mult) {$/;"	f
+ditchTitle	SuperQuickBioFabric.html	/^function ditchTitle(mySvg, fadeTime) {$/;"	f
+drawGlyphs	SuperQuickBioFabric.html	/^function drawGlyphs(mySvg, myGraph, mySec) {$/;"	f
+drawGlyphsClosure	SuperQuickBioFabric.html	/^function drawGlyphsClosure(mySvg, myGraph, mySec) {$/;"	f
+drawLabels	SuperQuickBioFabric.html	/^function drawLabels(mySvg, myGraph, mySec) {$/;"	f
+drawLabelsClosure	SuperQuickBioFabric.html	/^function drawLabelsClosure(mySvg, myGraph, mySec) {$/;"	f
+dropAll	SuperQuickBioFabric.html	/^function dropAll(mySvg) {$/;"	f
+foo	SuperQuickBioFabric.html	/^function foo() {};$/;"	f
+installForce	SuperQuickBioFabric.html	/^function installForce(mySvg, myWidth, myHeight, sfac, mySec) {$/;"	f
+installForceClosure	SuperQuickBioFabric.html	/^function installForceClosure(mySvg, myWidth, myHeight, sfac, mySec) {$/;"	f
+instantForce	SuperQuickBioFabric.html	/^function instantForce(mySvg, myGraph, myWidth, myHeight) {$/;"	f
+linksToVert	SuperQuickBioFabric.html	/^function linksToVert(mySvg, mySec) {$/;"	f
+linksToVertClosure	SuperQuickBioFabric.html	/^function linksToVertClosure(mySvg, mySec) {$/;"	f
+myTimer	SuperQuickBioFabric.html	/^function myTimer() {$/;"	f
+nextStep	SuperQuickBioFabric.html	/^function nextStep(mySvg, myText, myFunc) {$/;"	f
+nextStepEx	SuperQuickBioFabric.html	/^function nextStepEx(mySvg, myText, myFunc, exTime) {$/;"	f
+nodeToLines	SuperQuickBioFabric.html	/^function nodeToLines(mySvg, myWidth, sec) {$/;"	f
+nodeToLinesClosure	SuperQuickBioFabric.html	/^function nodeToLinesClosure(mySvg, myWidth, sec) {$/;"	f
+nodesToRows	SuperQuickBioFabric.html	/^function nodesToRows(mySvg, sec) {$/;"	f
+nodesToRowsClosure	SuperQuickBioFabric.html	/^function nodesToRowsClosure(mySvg, sec) {$/;"	f
+orderKids	SuperQuickBioFabric.html	/^function orderKids(myNode, currVal) {$/;"	f
+restart	SuperQuickBioFabric.html	/^function restart() {$/;"	f
+setNodeLength	SuperQuickBioFabric.html	/^function setNodeLength(mySvg, mySec) {$/;"	f
+setNodeLengthClosure	SuperQuickBioFabric.html	/^function setNodeLengthClosure(mySvg, mySec) {$/;"	f
+sizeIt	SuperQuickBioFabric.html	/^  function sizeIt(d, i) {$/;"	f
+sortGraph	SuperQuickBioFabric.html	/^function sortGraph(myGraph) {$/;"	f
+sortLinks	SuperQuickBioFabric.html	/^function sortLinks(myGraph) {$/;"	f
+unfadeAll	SuperQuickBioFabric.html	/^function unfadeAll(mySvg) {$/;"	f
+wrapItUp	SuperQuickBioFabric.html	/^function wrapItUp(mySvg, myHeight, myWidth, xLoc, wrapFade) {$/;"	f
+zoomed	SuperQuickBioFabric.html	/^function zoomed() {$/;"	f
