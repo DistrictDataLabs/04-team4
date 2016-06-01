@@ -2,14 +2,63 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <title>My project</title>
+    <title>Team 04 MVP Description</title>
     <script type="text/javascript"
       src="https://d3js.org/d3.v3.min.js"></script>
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <p><a href="lesmis.html">Les Miserables</a></p>
-    <p><a href="graph_builder.html">Directed Graph Builder</a></p>
-    <p><a href="interactive_network_demo/demo.html">Interactive Network Demo</a></p>
+    <h1>Time Graph Visualization</h1>
+    <h2>Minimum Viable Product:</h2>
+    <p>
+      Our project is to extend and augment existing graph visualizations to handle a temporal component.  
+      Many representations of graphs, even interactive ones, generally depict a graph that is in a static state, where the edge details between nodes are not changing.  
+      New tools are needed to visualize changes in a graph over time.  
+      We will add an interactive component to graph representations that allows a user to shift time, e.g. by adjusting sliders, to view how a graph changes when the time period it describes is changed.  
+      Our minimal viable product will be a force-directed graph, with terms as nodes, co-occurrence as edges, and sliders to adjust what time frame is depicted.  
+      The user will be able to adjust the sliders to view co-occurrences within different time periods, setting a start and end time.  
+      As the user adjusts the sliders, edges will appear and others will disappear, and the graph will adjust to the changing data.  
+      Frequency of co-occurrence may be depicted either by width of an edge, or the force the edge applies to the nodes it connects.
+    </p>
+    <h2>Data:</h2>
+    <p>
+      The input data will be generated from the Baleen project, details TBD.  
+      At a minimum, we expect the data to include terms, co-occurrences of terms within documents, and dates on which co-occurrence was observed.
+    </p>
+    <h2>Challenges:</h2>
+    <p>
+      There are two primary challenges this data will present.  
+      First, co-occurrences will come and go.  
+      The more granular the time periods, the more unstable the graph becomes with changes to time.  
+      Second, the anticipated scale of the graph is enormous.  
+      Steps will have to be taken either to allow interactive pruning of the graph, or to allow users to zoom in on details of the graph.
+    </p>
+    <h2>Possible enhancements to MVP:</h2>
+    <p>
+      One proposal is to provide the user an additional slider, or set of sliders, to limit which terms are displayed by some appropriate characteristics.  
+      For example, users may be afforded the ability to limit the graph to only those terms with a high average tf*idf value.  
+      This would allow the user to see relationships between only the most descriptive terms.  
+      Additionally/alternatively, users may be able to limit the graph to only nodes with a certain n-degree.  
+      This would allow the user to see relationships between terms that co-occur with many other terms or with only a few other terms.
+    </p>
+    <p>
+      Another possibility we hope to explore is the use of <a href="http://www.biofabric.org/">BioFabric</a>, or a similar graph representation, rather than a force-directed graph.  
+      This would allow the user to interact with a more stable graph.  
+      It may also help navigate the large scale.
+    </p>
+    <h2>Code under development:</h2>
+    <p>
+      Below are links to code we are building on to achieve the MVP:
+    </p>
+    <ul>
+    <li><a href="lesmis.html">Les Miserables</a></li>
+    <li><a href="graph_builder.html">Directed Graph Builder</a></li>
+    <li><a href="interactive_network_demo/demo.html">Interactive Network Demo</a></li>
+    <li><a href="SuperQuickBioFabric.html">Super Quick BioFabric Demo</a></li>
+    </ul>
+    <h2>Presentations:</h2>
+    <ul>
+    	<li><a href="presentation1.html">Presentation 1</a></li>
+    </ul>
   </body>
 </html>
